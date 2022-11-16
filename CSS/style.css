@@ -411,6 +411,7 @@ header .container button nav ul a:hover {
 @media all and (max-width: 992px) {
     .section .Services .container .box {
         flex-basis: 100%;
+        margin-right: 0;
     }
 
     .section .Services .container .box:nth-child(n+1):nth-child(-n+3) {
