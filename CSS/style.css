@@ -149,6 +149,7 @@ header .container button nav ul a {
     font-size: 14px;
     position: relative;
     z-index: 2;
+    transition: 250ms;
 }
 
 header .container button nav ul li:first-child a,
@@ -837,7 +838,7 @@ header .container button nav ul a:hover {
 }
 
 /* End About */
-/* Start Skiils */
+/* Start Skills */
 
 .our-skills {
     margin-block: var(--margin);
@@ -943,16 +944,16 @@ header .container button nav ul a:hover {
 .our-skills .skills span:last-child {
     flex-basis: 100%;
     height: 30px;
-    background: linear-gradient(to right, var(--color-1) 90%, 0, #ccc);
+    background: linear-gradient(to right, var(--color-1) 90%, 0, #dedadc);
     position: relative;
 }
 
 .our-skills .skills .html-css span:last-child {
-    background: linear-gradient(to right, var(--color-1) 85%, 0, #ccc);
+    background: linear-gradient(to right, var(--color-1) 85%, 0, #dedadc);
 }
 
 .our-skills .skills .js span:last-child {
-    background: linear-gradient(to right, var(--color-1) 80%, 0, #ccc);
+    background: linear-gradient(to right, var(--color-1) 80%, 0, #dedadc);
 }
 
 .our-skills .skills span:last-child::before,
@@ -1012,7 +1013,7 @@ header .container button nav ul a:hover {
     }
 }
 
-/* End Skiils */
+/* End Skills */
 /* Start Quote */
 
 .quote {
