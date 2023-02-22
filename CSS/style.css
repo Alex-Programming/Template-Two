@@ -1170,6 +1170,7 @@ header .container button nav ul a:hover {
     border: 1px solid var(--color-1);
     width: fit-content;
     padding: 20px;
+    color: black;
 }
 
 .pricing .box .text {
