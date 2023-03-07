@@ -944,16 +944,16 @@ header .container button nav ul a:hover {
 .our-skills .skills span:last-child {
     flex-basis: 100%;
     height: 30px;
-    background: linear-gradient(to right, var(--color-1) 90%, 0, #dedadc);
+    background: linear-gradient(to right, var(--color-1) 90%, 0, #eee);
     position: relative;
 }
 
 .our-skills .skills .html-css span:last-child {
-    background: linear-gradient(to right, var(--color-1) 85%, 0, #dedadc);
+    background: linear-gradient(to right, var(--color-1) 85%, 0, #eee);
 }
 
 .our-skills .skills .js span:last-child {
-    background: linear-gradient(to right, var(--color-1) 80%, 0, #dedadc);
+    background: linear-gradient(to right, var(--color-1) 80%, 0, #eee);
 }
 
 .our-skills .skills span:last-child::before,
