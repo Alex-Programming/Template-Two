@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elzero Template Two</title>
     <!-- Icon Template -->
     <link rel="icon" href="image/icon.png">
     <link rel="shortcut" href="image/icon.png">
@@ -15,11 +16,6 @@
     <link rel="stylesheet" href="CSS/all.min.css">
     <!--Main Template CSS File-->
     <link rel="stylesheet" href="CSS/style.css">
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-    <title>Kasper Template Two</title>
 </head>
 
 <body>
@@ -29,20 +25,20 @@
             <a href="#">
                 <img src="image/logo.png" alt="error">
             </a>
-            <button>
-                <nav>
+            <nav>
+                <button>
                     <i class="fas fa-bars"></i>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a class="click" href="#home">Home</a></li>
+                        <li><a class="click" href="#services">Services</a></li>
+                        <li><a class="click" href="#portfolio">Portfolio</a></li>
+                        <li><a class="click" href="#about">About</a></li>
+                        <li><a class="click" href="#pricing">Pricing</a></li>
+                        <li><a class="click" href="#contact">Contact</a></li>
                     </ul>
-                    <i class="fas fa-search"></i>
-                </nav>
-            </button>
+                </button>
+                <i class="fas fa-search"></i>
+            </nav>
         </div>
     </header>
     <!-- End header -->
@@ -58,12 +54,13 @@
                 tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris
                 blandit aliquet elit, eget tincidunt.</p>
         </div>
-        <i class="fas fa-angle-left fa-3x"></i>
-        <i class="fas fa-angle-right fa-3x"></i>
+        <i class="fas fa-angle-left click"></i>
+        <i class="fas fa-angle-right click"></i>
         <div class="circle">
-            <span></span>
-            <span></span>
-            <span></span>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button class="effect"></button>
         </div>
     </div>
     <!-- End Landing -->
@@ -151,11 +148,11 @@
         </div>
         <div class="portfolio-container">
             <ul>
-                <li>All</li>
-                <li>App</li>
-                <li>Photo</li>
-                <li>Web</li>
-                <li>Print</li>
+                <li class="click">All</li>
+                <li class="click">App</li>
+                <li class="click">Photo</li>
+                <li class="click">Web</li>
+                <li class="click">Print</li>
             </ul>
             <div class="box">
                 <div>
@@ -214,7 +211,7 @@
                         <p>Photography</p>
                     </div>
                 </div>
-                <a href="#">MORE</a>
+                <a class="click" href="#">MORE</a>
             </div>
         </div>
     </div>
@@ -228,7 +225,7 @@
         <div class="text">
             <h2>SUPER AWESOME VIDEO HERE</h2>
             <p>Its All You Need</p>
-            <button>SEE MORE</button>
+            <button class="click">SEE MORE</button>
         </div>
     </div>
     <!-- End Video -->
@@ -302,9 +299,10 @@
                     </div>
                 </div>
                 <div class="circle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button class="effect"></button>
                 </div>
             </div>
             <div class="skills">
@@ -366,7 +364,7 @@
                         <li>Extra Feature No 2</li>
                         <li>Feature</li>
                     </ul>
-                    <a href="#">Buy Now</a>
+                    <a class="click" href="#">Buy Now</a>
                 </div>
                 <div class="parent">
                     <div>
@@ -379,7 +377,7 @@
                         <li>Extra Feature No 2</li>
                         <li>Feature</li>
                     </ul>
-                    <a href="#">Buy Now</a>
+                    <a class="click" href="#">Buy Now</a>
                 </div>
                 <div class="parent">
                     <div>
@@ -392,7 +390,7 @@
                         <li>Extra Feature No 2</li>
                         <li>Feature</li>
                     </ul>
-                    <a href="#">Buy Now</a>
+                    <a class="click" href="#">Buy Now</a>
                 </div>
                 <div class="parent">
                     <div>
@@ -405,12 +403,12 @@
                         <li>Extra Feature No 2</li>
                         <li>Feature</li>
                     </ul>
-                    <a href="#">Buy Now</a>
+                    <a class="click" href="#">Buy Now</a>
                 </div>
             </div>
             <div class="text">
                 <p>Contact us if you have special request</p>
-                <a href="#">Contact Us</a>
+                <a class="click" href="#">Contact Us</a>
             </div>
         </div>
     </div>
@@ -421,7 +419,7 @@
             <form action="">
                 <i class="far fa-envelope fa-lg"></i>
                 <input type="email" placeholder="Your Email">
-                <input type="submit" value="SUBSCRIBE">
+                <input class="click" type="submit" value="SUBSCRIBE">
             </form>
             <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blan dit aliquet elit, eget
                 tincidunt.</p>
@@ -442,7 +440,7 @@
                     <input type="username" placeholder="Your Name">
                     <input type="email" placeholder="Your Email">
                     <textarea placeholder="Your Message"></textarea>
-                    <input type="submit" value="SEND MESSAGE">
+                    <input class="click" type="submit" value="SEND MESSAGE">
                 </form>
                 <div class="box">
                     <div>
@@ -469,14 +467,19 @@
         </div>
         <div class="icon">
             <p>WE ARE SOCIAL</p>
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fas fa-home"></i>
-            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-facebook-f click"></i>
+            <i class="fab fa-twitter click"></i>
+            <i class="fas fa-home click"></i>
+            <i class="fab fa-linkedin click"></i>
         </div>
         <p>&#169; 2021 <span>Kasper</span> All Right Reserved</p>
     </footer>
     <!-- End Footer -->
+    <!-- Start Scroll To Top -->
+    <div  class="to-top">
+        <a class="fas fa-angle-up" href="#"></a>
+    </div>
+    <!-- End Scroll To Top -->
 </body>
 
 </html>
