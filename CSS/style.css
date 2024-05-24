@@ -69,249 +69,40 @@
     --heading-color-1: #333;
     --heading-color-2: #777;
     --margin: 80px;
+    --transition: 300ms;
 }
 
 /*End Variables*/
 
-body {
-    font-family: sans-serif, 'Open Sans';
-}
+/* Start General Classes */
 
-/* Start Header */
-
-header {
-    position: absolute;
-    width: 100%;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    height: 97.09px;
-}
-
-header .container::after {
-    content: "";
-    position: absolute;
-    left: 15px;
-    bottom: 0;
-    width: calc(100% - 30px);
-    height: 1px;
-    background: var(--color-2);
-}
-
-header .container img {
-    height: 40px;
-}
-
-header .container button {
-    background-color: transparent;
-    border: none;
-    text-align: start;
-}
-
-header .container button nav i:first-child {
-    font-size: 22px;
-    color: var(--color-3);
-    display: none;
+.click {
     cursor: pointer;
+    transition: var(--transition);
 }
 
-header .container button nav i:last-child {
-    font-size: 20px;
-    border-left: solid 1px var(--color-3);
-    color: var(--color-3);
-    padding-left: 20px;
-    margin-left: 20px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    position: relative;
+.click:hover {
+    opacity: 80%;
 }
 
-header .container button nav {
-    display: flex;
-    align-items: center;
+.click:active {
+    opacity: 100%;
 }
 
-header .container button nav ul {
-    list-style-type: none;
-    display: flex;
-}
-
-header .container button nav ul a {
-    display: block;
-    text-decoration-line: none;
-    color: var(--color-3);
-    padding: 40px 10px;
-    font-size: 14px;
-    position: relative;
-    z-index: 2;
-    transition: 250ms;
-}
-
-header .container button nav ul li:first-child a,
-header .container button nav ul a:hover {
-    color: var(--color-1);
-    border-bottom: var(--color-1) 1px solid;
-}
-
-@media all and (max-width: 768px) {
-    header .container button nav i:first-child {
-        display: block;
-    }
-
-    header .container button nav ul {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        flex-direction: column;
-        width: 100%;
-        align-items: start;
-        background-color: var(--color-4);
-    }
-
-    header .container button nav ul li {
-        width: 100%;
-    }
-
-    header .container button nav ul a {
-        padding: 15px;
-    }
-
-    header .container button:focus-within ul {
-        display: flex;
-    }
-}
-
-/* End Header */
-
-/* Start Landing */
-.landing {
-    left: 0;
-    top: 0;
-    height: 100vh;
-    background: url(../image/landing.jpg) no-repeat left/cover;
-    z-index: -1;
-}
-
-.landing .overlay {
-    /* position: absolute; */
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-4);
-}
-
-.landing .text,
-.landing i {
+.circle .effect {
     position: absolute;
-    width: 100%;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    transform: translateX(calc(100% + 10px));
+    background: var(--color-1) !important;
+    border-color: var(--color-1) !important;
+    transition: var(--transition);
 }
 
-.landing .text {
-    width: 50%;
-    background-color: var(--color-5);
-    color: var(--color-3);
-    padding: 40px 60px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
+.circle button:nth-child(1):focus~.effect {
+    transform: translateX(0);
 }
 
-.landing .text :where(h2, p) {
-    font-weight: normal;
-    flex-basis: 500px;
-    line-height: 1.5;
-    margin-block: 10px;
-    font-size: xx-large;
-}
-
-.landing .text p {
-    line-height: 2;
-    font-size: 14px;
-}
-
-.landing i {
-    color: rgb(255 255 255 / .5);
-    left: 20px;
-    width: fit-content;
-}
-
-.landing i:last-of-type {
-    inset: 50% 20px auto auto;
-}
-
-.landing .circle {
-    position: absolute;
-    bottom: 20px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-.landing .circle span {
-    flex-basis: 20px;
-    height: 20px;
-    border: var(--color-2) 1px solid;
-    border-radius: 50%;
-    margin-left: 10px;
-}
-
-.landing .circle span:nth-child(2) {
-    background: var(--color-1);
-    border: none;
-}
-
-/* large */
-@media all and (max-width: 1200px) {
-    .landing .text {
-        width: 70%;
-    }
-
-    .landing i {
-        font-size: xx-large;
-    }
-}
-
-/* small */
-@media all and (max-width: 841px) {
-    .landing .text {
-        width: 100%;
-        justify-content: start;
-    }
-
-    .landing .text :where(h2, p) {
-        flex-basis: auto;
-    }
-
-    .landing i {
-        display: none;
-    }
-
-    @media all and (max-width: 481px) {
-        .landing .text h2 {
-            font-size: 20px;
-        }
-
-        .landing .text p {
-            font-size: 12px;
-        }
-    }
-}
-
-/* End Landing */
-
-/* Start Services */
-.section {
-    scroll-margin-top: 80px;
-    margin-top: var(--margin);
-    margin-bottom: var(--margin);
+.circle button:nth-child(3):focus~.effect {
+    transform: translateX(calc(200% + 20px));
 }
 
 .main-heading {
@@ -362,6 +153,274 @@ header .container button nav ul a:hover {
     margin: 20px;
 }
 
+/* End General Classes */
+
+body {
+    font-family: Arial, Sans-Serif;
+    position: relative;
+}
+
+/* Start Header */
+
+header {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 97.09px;
+}
+
+header .container::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    width: calc(100% - 30px);
+    height: 1px;
+    background: var(--color-2);
+}
+
+header .container img {
+    height: 40px;
+}
+
+header .container nav {
+    display: flex;
+    align-items: center;
+}
+
+header .container button {
+    background-color: transparent;
+    border: none;
+    text-align: start;
+    margin-right: 20px;
+}
+
+header .container button:focus-within {
+    pointer-events: none;
+}
+
+header .container nav i {
+    color: var(--color-3);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+header .container button i {
+    font-size: 22px;
+    display: none;
+}
+
+header .container button:focus-within i::before {
+    content: "\f00d";
+}
+
+header .container nav > i {
+    font-size: 20px;
+    margin-left: 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+header .container nav > i::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background: var(--color-3);
+    left: -20.5px;
+    pointer-events: none;
+}
+
+header .container nav ul {
+    list-style-type: none;
+    pointer-events: auto;
+    display: flex;
+}
+
+header .container nav ul a {
+    display: block;
+    text-decoration-line: none;
+    color: var(--color-3);
+    padding: 40px 10px;
+    font-size: 14px;
+    border-bottom: transparent 1px solid;
+    position: relative;
+    z-index: 2;
+}
+
+header .container nav ul li:first-child a,
+header .container nav ul a:hover {
+    color: var(--color-1);
+    border-color: var(--color-1);
+    opacity: 100%;
+}
+
+@media all and (max-width: 768px) {
+    header .container nav i:first-child {
+        display: block;
+    }
+
+    header .container nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        align-items: start;
+        background-color: var(--color-4);
+    }
+
+    header .container nav ul li {
+        width: 100%;
+    }
+
+    header .container nav ul a {
+        padding: 15px;
+    }
+
+    header .container button:focus-within ul {
+        display: flex;
+    }
+}
+
+/* End Header */
+
+/* Start Landing */
+.landing {
+    position: relative;
+    height: 100vh;
+    background: url(../image/landing.jpg) no-repeat left top/cover;
+}
+
+.landing .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-4);
+}
+
+.landing .text,
+.landing i {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.landing .text {
+    width: 50%;
+    background-color: var(--color-5);
+    color: var(--color-3);
+    padding: 40px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+.landing .text :where(h2, p) {
+    font-weight: normal;
+    flex-basis: 500px;
+    line-height: 1.5;
+    margin-block: 10px;
+    font-size: xx-large;
+}
+
+.landing .text p {
+    line-height: 2;
+    font-size: 14px;
+}
+
+.landing i {
+    font-size: xx-large;
+    color: rgb(255 255 255);
+    left: 20px;
+    width: fit-content;
+    opacity: 50%;
+}
+
+.landing i:last-of-type {
+    inset: 50% 20px auto auto;
+}
+
+.landing .circle {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.landing .circle button {
+    width: 20px;
+    height: 20px;
+    border: var(--color-2) 1px solid;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.landing .circle button:not(:last-child):hover {
+    background: rgb(0 199 252 / 50%);
+    border-color: rgb(0 199 252 / 50%);
+}
+
+.landing .circle button:not(:nth-child(n+3)) {
+    margin-right: 10px;
+}
+
+/* large */
+@media all and (max-width: 1200px) {
+    .landing .text {
+        width: 70%;
+    }
+}
+
+/* small */
+@media all and (max-width: 841px) {
+    .landing .text {
+        width: 100%;
+        justify-content: start;
+    }
+
+    .landing .text :where(h2, p) {
+        flex-basis: auto;
+    }
+
+    .landing i {
+        display: none;
+    }
+
+    @media all and (max-width: 481px) {
+        .landing .text h2 {
+            font-size: 20px;
+        }
+
+        .landing .text p {
+            font-size: 12px;
+        }
+    }
+}
+
+/* End Landing */
+
+/* Start Services */
+.section {
+    scroll-margin-top: 80px;
+    margin-top: var(--margin);
+    margin-bottom: var(--margin);
+}
+
 .section .Services .container {
     display: flex;
     flex-wrap: wrap;
@@ -370,6 +429,9 @@ header .container button nav ul a:hover {
 .section .Services .container .box {
     display: flex;
     flex-basis: calc(50% - 20px);
+}
+
+.section .Services .container .box:not(:nth-child(even)) {
     margin-right: 20px;
 }
 
@@ -412,7 +474,7 @@ header .container button nav ul a:hover {
 @media all and (max-width: 992px) {
     .section .Services .container .box {
         flex-basis: 100%;
-        margin-right: 0;
+        margin-right: 0 !important;
     }
 
     .section .Services .container .box:nth-child(n+1):nth-child(-n+3) {
@@ -561,24 +623,22 @@ header .container button nav ul a:hover {
 }
 
 .portfolio-container ul li {
-    margin-right: 2px;
     padding: 10px;
-    cursor: pointer;
+}
+
+.portfolio-container ul li:not(:last-child) {
+    margin-right: 2px;
 }
 
 .portfolio-container ul li:first-child {
     background-color: var(--color-1);
     color: var(--color-3);
+    opacity: 1;
 }
 
 .portfolio-container ul li:not(:first-child):hover {
     background-color: var(--color-1);
     color: var(--color-3);
-    opacity: 80%;
-}
-
-.portfolio-container ul li:not(:first-child):active {
-    opacity: 100%;
 }
 
 .portfolio-container .box {
@@ -610,7 +670,7 @@ header .container button nav ul a:hover {
 .portfolio-container .box>div img {
     width: 100%;
     /* height: 100%; */
-    transition: 300ms;
+    transition: var(--transition);
 }
 
 .portfolio-container .box>div:hover img {
@@ -624,7 +684,7 @@ header .container button nav ul a:hover {
     background-color: var(--color-3);
     width: 100%;
     padding: 15px;
-    transition: 300ms;
+    transition: var(--transition);
 }
 
 .portfolio-container .box>div:hover .text {
@@ -704,6 +764,10 @@ header .container button nav ul a:hover {
     padding: 10px 15px;
     font-size: 14px;
     border: none;
+}
+
+.video .text button:hover {
+    background-color: var(--color-1);
 }
 
 @media all and (max-width:767px) {
@@ -913,26 +977,36 @@ header .container button nav ul a:hover {
 
 .our-skills .circle {
     display: flex;
-    justify-content: center;
+    width: fit-content;
+    margin: auto;
     padding-block: 10px 30px;
 }
 
-.our-skills .circle span {
+.our-skills .circle button {
     width: 15px;
     height: 15px;
     border-radius: 50%;
     border: 1px solid var(--heading-color-2);
+    background: transparent;
+    cursor: pointer;
+    transition: var(--transition);
 }
 
-.our-skills .circle span:nth-child(2) {
-    background: var(--color-1);
+.our-skills .circle button:hover {
+    background: rgb(0 199 252 / 50%);
+    border-color: rgb(0 199 252 / 50%);
+}
+
+.our-skills .circle button:nth-child(2) {
     margin-inline: 10px;
-    border: none;
 }
 
 .our-skills .skills .my-skills div {
     display: flex;
     flex-flow: wrap;
+}
+
+.our-skills .skills .my-skills div:not(:last-child) {
     margin-bottom: 35px;
 }
 
@@ -1085,6 +1159,7 @@ header .container button nav ul a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .pricing .box .container .parent {
@@ -1163,7 +1238,6 @@ header .container button nav ul a:hover {
     transform: none;
 }
 
-
 .pricing .box .container .parent a {
     display: block;
     text-decoration: none;
@@ -1171,6 +1245,10 @@ header .container button nav ul a:hover {
     width: fit-content;
     padding: 20px;
     color: black;
+}
+
+.pricing .box .container .parent a:hover {
+    color: var(--color-1);
 }
 
 .pricing .box .text {
@@ -1197,6 +1275,9 @@ header .container button nav ul a:hover {
 @media all and (max-width: 1200px) {
     .pricing .box .container .parent {
         flex-basis: calc((100% - 100px) / 3);
+    }
+
+    .pricing .box .container .parent:not(:nth-child(n+3)) {
         margin-bottom: 50px;
     }
 }
@@ -1212,6 +1293,9 @@ header .container button nav ul a:hover {
 @media all and (max-width: 600px) {
     .pricing .box .container .parent {
         flex-basis: 100%;
+    }
+    .pricing .box .container .parent:not(:last-child) {
+        margin-bottom: 50px;
     }
 }
 
@@ -1244,6 +1328,11 @@ header .container button nav ul a:hover {
 .subscribe form i {
     color: var(--color-3);
     margin-left: 20px;
+    transition: var(--transition);
+}
+
+.subscribe form:focus-within i {
+    color: var(--color-1);
 }
 
 .subscribe form input[type="email"] {
@@ -1265,7 +1354,6 @@ header .container button nav ul a:hover {
     border: none;
     outline: none;
     padding: 20px;
-    cursor: pointer;
 }
 
 .subscribe .container p {
@@ -1291,7 +1379,6 @@ header .container button nav ul a:hover {
     .subscribe form {
         flex-basis: 100%;
         flex-wrap: wrap;
-        margin-top: 30px;
         border: none;
         justify-content: center;
     }
@@ -1351,7 +1438,6 @@ header .container button nav ul a:hover {
     color: var(--color-3);
     padding: 22px 15px;
     border: none;
-    cursor: pointer;
 }
 
 .contact .container .box div {
@@ -1433,6 +1519,10 @@ footer .icon p::before {
     background: var(--color-3);
 }
 
+footer .icon i:hover {
+    color: var(--color-1);
+}
+
 footer>p {
     flex-basis: 100%;
     padding-block: var(--margin) 50px;
@@ -1444,3 +1534,56 @@ footer>p span {
 }
 
 /* End Footer */
+
+/* Start Scroll To Top */
+
+.to-top {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 25px;
+    padding-top: 150vh;
+    pointer-events: none;
+}
+
+.to-top a {
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    color: var(--color-1);
+    position: sticky;
+    top: calc(100vh - 50px);
+    text-decoration: none;
+    pointer-events: auto;
+}
+
+.to-top a::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    border-radius: 50%;
+    border: 3px dashed var(--color-1);
+    z-index: -1;
+    transition: var(--transition) linear;
+    box-shadow: 0 0 0 0 var(--color-1) inset
+}
+
+.to-top a:hover::after {
+    box-shadow: 0 0 0 15px rgb(0 199 252 /.1) inset;
+}
+
+.to-top a:hover::after {
+    animation-name: rotate;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(-1turn);
+    }
+}
+
+/* End Scroll To Top */
